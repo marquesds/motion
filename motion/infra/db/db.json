@@ -1,0 +1,231 @@
+{
+    "posts": {
+        "meuemail1@exemplo.com": [
+            {
+                "linha": "746R-10 - Term. Bandeira / Jd. Jaqueline",
+                "texto": "Tenho percebido atrasos constantes na linha 746R/10 nos últimos dias, além de superlotação em horários de pico. Vários usuários têm se queixado sobre essa situação.",
+                "curtidas": 10
+            },
+            {
+                "linha": "917M-10 - Term. Campo Limpo / Shop. Morumbi",
+                "texto": "Presenciei um ônibus da linha 917M/10 com pane mecânica na Avenida Giovanni Gronchi na manhã de ontem, causando a interdição de uma das faixas. Foi um transtorno para os passageiros e também para os motoristas que trafegavam na via.",
+                "curtidas": 7
+            },
+            {
+                "linha": "4706-10 - Term. Capelinha / Metrô Vila Mariana",
+                "texto": "Tenho percebido a falta de manutenção nos veículos da frota da linha 4706/10, o que tem gerado constantes quebras e atrasos. Isso tem causado um grande desconforto para os usuários que dependem dessa linha.",
+                "curtidas": 15
+            },
+            {
+                "linha": "702C-10 - Term. Capelinha / Metrô Ana Rosa",
+                "texto": "Fiquei sabendo que um passageiro foi assaltado na noite de ontem dentro de um ônibus da linha 702C/10, que faz o trajeto entre o Terminal Capelinha e o Metrô Ana Rosa. É preocupante que esse tipo de situação ainda aconteça em transportes públicos.",
+                "curtidas": 23
+            },
+            {
+                "linha": "5109-10 - Term. Capelinha / Jd. São Luís",
+                "texto": "Tenho notado que o tempo de espera nos pontos de ônibus da linha 5109/10 tem sido superior a 30 minutos, mesmo em horários de pico. Essa espera prolongada tem afetado a rotina dos usuários e gerado muita insatisfação.",
+                "curtidas": 8
+            }
+        ],
+        "meuemail2@exemplo.com": [
+            {
+                "linha": "917H-10 - Term. Capelinha / Term. Morumbi",
+                "texto": "Ontem, presenciei um acidente envolvendo um ônibus da linha 917H/10 que bateu em um carro na Avenida Morumbi. Foi um susto para todos que estavam próximos ao local do acidente e também gerou um grande congestionamento na região.",
+                "curtidas": 20
+            },
+            {
+                "linha": "172J-10 - CPTM São Miguel Paulista / Metrô Tatuapé",
+                "texto": "Percebi que vários ônibus da linha 172J/10 estão circulando com pneus carecas, o que pode representar um grande risco para os usuários, principalmente em dias de chuva. É importante que a empresa responsável pela frota dessa linha tome providências imediatas para evitar acidentes.",
+                "curtidas": 12
+            },
+            {
+                "linha": "675R-10 - Term. Campo Limpo / Metrô Vila Mariana",
+                "texto": "Na semana passada, um ônibus da linha 675R/10 teve um problema mecânico e precisou ser rebocado, causando um grande atraso para os usuários que estavam no veículo e nos demais que aguardavam nos pontos de ônibus. Essa situação tem se repetido com frequência nos últimos meses.",
+                "curtidas": 6
+            },
+            {
+                "linha": "6015-10 - Term. Capelinha / Term. Bandeira",
+                "texto": "Um usuário da linha 6015/10 relatou que foi vítima de assédio dentro de um ônibus, e que o motorista não tomou nenhuma atitude para ajudá-la. É inaceitável que esse tipo de situação ocorra em transportes públicos, e é preciso que haja um maior cuidado e proteção por parte das empresas responsáveis.",
+                "curtidas": 18
+            },
+            {
+                "linha": "746P-10 - Term. Capelinha / Metrô São Judas",
+                "texto": "Um ônibus da linha 746P/10 ficou preso em um buraco na rua no final de semana, causando um grande transtorno para os usuários que estavam dentro do veículo e também para os motoristas que trafegavam na via. É importante que as autoridades responsáveis pela manutenção das ruas e avenidas da cidade atuem com maior efetividade para evitar esse tipo de situação.",
+                "curtidas": 9
+            }
+        ],
+        "email1@example.com": [
+            {
+                "linha": "1700-10 - Term. Campo Limpo / Term. Pq. D. Pedro II",
+                "texto": "Hoje pela manhã, presenciei um acidente envolvendo um ônibus da linha 1700/10. O veículo colidiu com um carro na Avenida Paulista, causando grande tumulto no trânsito e deixando alguns passageiros feridos. Espero que as autoridades tomem medidas para aumentar a segurança no trânsito da cidade.",
+                "curtidas": 23
+            },
+            {
+                "linha": "875C-10 - Metrô Tucuruvi / Term. Cachoeirinha",
+                "texto": "Ontem à noite, estava voltando para casa em um ônibus da linha 875C/10 quando o veículo foi abordado por assaltantes armados. Eles levaram pertences de vários passageiros, incluindo meu celular e carteira. É lamentável que não haja segurança suficiente nos transportes públicos de São Paulo.",
+                "curtidas": 45
+            },
+            {
+                "linha": "4310-10 - Term. Santo Amaro / Term. Pq. D. Pedro II",
+                "texto": "Recentemente, tenho notado um aumento no número de assaltos nos ônibus da linha 4310/10. É preciso que as autoridades e as empresas responsáveis pela frota desses veículos atuem de forma mais enérgica para garantir a segurança dos passageiros. Não podemos viver com medo de utilizar o transporte público.",
+                "curtidas": 17
+            },
+            {
+                "linha": "675K-10 - Term. Capelinha / Metrô Jabaquara",
+                "texto": "Um ônibus da linha 675K/10 quebrou no meio do trajeto na semana passada, causando um grande transtorno para os passageiros que estavam dentro do veículo. O problema foi resolvido somente depois de quase duas horas, o que demonstra a falta de manutenção adequada na frota dessa linha.",
+                "curtidas": 9
+            },
+            {
+                "linha": "172J-10 - Metrô Jabaquara / Term. João Dias",
+                "texto": "Os ônibus da linha 172J/10 estão circulando com pneus carecas, o que pode representar um grande risco para os usuários, principalmente em dias de chuva. É importante que a empresa responsável pela frota dessa linha tome providências imediatas para evitar acidentes.",
+                "curtidas": 12
+            }
+        ],
+        "email2@example.com": [
+            {
+                "linha": "675R-10 - Term. Campo Limpo / Metrô Vila Mariana",
+                "texto": "Na semana passada, um ônibus da linha 675R/10 teve um problema mecânico e precisou ser rebocado, causando um grande atraso para os usuários que estavam no veículo e nos demais que aguardavam nos pontos de ônibus. Essa situação tem se repetido com frequência nos últimos meses.",
+                "curtidas": 6
+            },
+            {
+                "linha": "6015-10 - Term. Capelinha / Term. Princ. Isabel",
+                "texto": "Eu já presenciei diversas brigas entre passageiros em ônibus da linha 6015/10. Muitas vezes, as discussões começam por conta da superlotação dos veículos, o que gera desconforto e estresse. É preciso que as empresas responsáveis pela frota desses ônibus tomem providências para evitar esse tipo de situação.",
+                "curtidas": 8
+            },
+            {
+                "linha": "875A-10 - Term. Cachoeirinha / Lapa",
+                "texto": "Há alguns meses, um ônibus da linha 875A/10 foi assaltado enquanto circulava pela Avenida Inajar de Souza. Os bandidos levaram os pertences de todos os passageiros e chegaram a agredir um idoso que tentou resistir. É inadmissível que os usuários do transporte público sejam expostos a esse tipo de violência.",
+                "curtidas": 32
+            },
+            {
+                "linha": "702C-10 - Term. Jd. Ângela / Metrô Capão Redondo",
+                "texto": "Recentemente, tive que utilizar um ônibus da linha 702C/10 em horário de pico e fiquei extremamente preocupado com a superlotação do veículo. Não havia espaço para todos os passageiros sentarem e muitas pessoas precisaram viajar em pé, o que é perigoso e desconfortável.",
+                "curtidas": 14
+            },
+            {
+                "linha": "675P-10 - Term. Capelinha / Term. Pq. D. Pedro II",
+                "texto": "Um ônibus da linha 675P/10 apresentou falha no sistema de freios durante a descida da Serra do Mar, colocando em risco a vida dos passageiros. O motorista conseguiu controlar o veículo e evitar um acidente, mas essa situação é completamente inaceitável. As empresas de transporte precisam garantir a segurança dos usuários.",
+                "curtidas": 19
+            }
+        ],
+        "email3@example.com": [
+            {
+                "linha": "2290-10 - Term. São Mateus / CPTM Autódromo",
+                "texto": "Recentemente, um ônibus da linha 2290/10 pegou fogo durante o trajeto, assustando os passageiros e causando grande transtorno no trânsito. Felizmente, ninguém se feriu gravemente, mas a situação poderia ter sido muito pior. É fundamental que as empresas responsáveis pela frota desses veículos realizem manutenção regular e preventiva para evitar acidentes.",
+                "curtidas": 25
+            },
+            {
+                "linha": "917H-10 - Term. Santo Amaro / Term. Pq. D. Pedro II",
+                "texto": "Os ônibus da linha 917H/10 estão circulando com defeitos no ar-condicionado, o que tem causado grande desconforto para os passageiros, especialmente em dias quentes. Além disso, muitos veículos dessa linha estão com bancos quebrados ou rasgados, o que é inaceitável para um serviço que deveria ser de qualidade.",
+                "curtidas": 7
+            },
+            {
+                "linha": "957T-10 - Term. Grajaú / Term. Pq. D. Pedro II",
+                "texto": "Eu costumo utilizar a linha 957T/10 com frequência e já presenciei diversos casos de motoristas imprudentes, que dirigem em alta velocidade ou fazem manobras perigosas. Isso coloca em risco a vida dos passageiros e dos demais motoristas e pedestres. É necessário que as empresas de transporte orientem e fiscalizem seus funcionários para garantir a segurança de todos.",
+                "curtidas": 11
+            },
+            {
+                "linha": "875A-10 - Term. Cachoeirinha / Lapa",
+                "texto": "Há algumas semanas, um ônibus da linha 875A/10 ficou parado por mais de uma hora no meio do trajeto, sem que os passageiros recebessem qualquer informação ou orientação da empresa responsável. Essa falta de transparência e comunicação gera ainda mais desconforto e desconfiança por parte dos usuários do transporte público.",
+                "curtidas": 6
+            },
+            {
+                "linha": "6030-10 - Term. Capelinha / Term. Princ. Isabel",
+                "texto": "Em um dia de chuva intensa, um ônibus da linha 6030/10 apresentou vazamento de água, molhando os passageiros e danificando equipamentos eletrônicos, como celulares e notebooks. É inadmissível que um veículo de transporte público não esteja preparado para enfrentar condições climáticas adversas.",
+                "curtidas": 23
+            },
+            {
+                "linha": "8022-10 - Term. Pq. D. Pedro II / Term. Sto. Amaro",
+                "texto": "Já presenciei diversas vezes casos de assédio sexual dentro de ônibus da linha 8022/10. Infelizmente, muitas mulheres são vítimas desse tipo de violência e se sentem inseguras ao utilizar o transporte público. É preciso que as empresas de transporte realizem campanhas de conscientização e treinamento para seus funcionários, a fim de coibir esse tipo de comportamento.",
+                "curtidas": 29
+            },
+            {
+                "linha": "715M-10 - Term. Varginha / Term. Jd. Ângela",
+                "texto": "Recentemente, um ônibus da linha 715M/10 se envolveu em um acidente com um carro, deixando alguns passageiros feridos. A situação foi caótica e muitos usuários ficaram sem saber o que fazer. É fundamental que as empresas de transporte estejam preparadas para lidar com esse tipo de emergência e prestem assistência adequada aos passageiros.",
+                "curtidas": 17
+            }
+        ]
+    },
+    "lines": [
+        {
+            "number": "106A-10",
+            "description": "Terminal Princesa Isabel - Metrô Santana"
+        },
+        {
+            "number": "174M-10",
+            "description": "Metrô Santana - Terminal Parelheiros"
+        },
+        {
+            "number": "4312-10",
+            "description": "Terminal Vila Carrão - Terminal Pinheiros"
+        },
+        {
+            "number": "967A-10",
+            "description": "Terminal Santo Amaro - Terminal Pinheiros"
+        },
+        {
+            "number": "476A-10",
+            "description": "Terminal Santo Amaro - Terminal Pirituba"
+        },
+        {
+            "number": "857P-10",
+            "description": "Terminal Campo Limpo - Metrô Jabaquara"
+        },
+        {
+            "number": "573A-10",
+            "description": "Metrô Tucuruvi - Terminal Santo Amaro"
+        },
+        {
+            "number": "5630-10",
+            "description": "Terminal São Mateus - Itaim Bibi"
+        },
+        {
+            "number": "8700-10",
+            "description": "Terminal Lapa - Terminal Jardim Ângela"
+        },
+        {
+            "number": "971X-10",
+            "description": "Terminal Vila Carrão - Terminal Bandeira"
+        },
+        {
+            "number": "809P-10",
+            "description": "Terminal Campo Limpo - Terminal Pinheiros"
+        },
+        {
+            "number": "637P-10",
+            "description": "Terminal João Dias - Term. Pq. D. Pedro II"
+        },
+        {
+            "number": "477P-10",
+            "description": "Terminal Capelinha - Terminal Lapa"
+        },
+        {
+            "number": "2023-10",
+            "description": "Terminal Pirituba - CPTM Piqueri"
+        },
+        {
+            "number": "4028-10",
+            "description": "CPTM Jaraguá - Terminal Lapa"
+        },
+        {
+            "number": "875A-10",
+            "description": "Terminal Santo Amaro - Terminal Cidade Tiradentes"
+        },
+        {
+            "number": "5362-10",
+            "description": "Terminal Grajaú - Terminal Pinheiros"
+        },
+        {
+            "number": "675I-10",
+            "description": "Jardim Damasceno - Largo do Paissandu"
+        },
+        {
+            "number": "978T-10",
+            "description": "Terminal Vila Carrão - Praça do Correio"
+        },
+        {
+            "number": "5110-10",
+            "description": "Terminal Jardim Ângela - Terminal Bandeira"
+        }
+    ]
+}

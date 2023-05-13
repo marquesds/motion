@@ -1,0 +1,130 @@
+{% extends "base.html" %} {% block title %}Atualizações{% endblock %} {% block
+content %}
+<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl font-bold mb-8">Últimas Atualizações</h2>
+  <div class="grid grid-cols-1 gap-4">
+    <div class="bg-gray-700 shadow-md rounded-lg overflow-hidden" id="post-1">
+      <div class="px-4 py-2">
+        <div class="font-bold text-xl mb-2 text-white">
+          LINHA 7004-10 EST. STO. AMARO
+        </div>
+        <p class="text-gray-400 text-base">
+          ônibus parado na Av. Santo Amaro, sentido bairro, próximo à Rua João
+          Alvares Soares.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+          <div class="flex items-center">
+            <img
+              src="https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg"
+              class="h-6 w-6 rounded-full mr-2"
+            />
+            <span class="text-gray-400">Jan 1, 2022</span>
+          </div>
+          <div class="flex items-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              onclick="addLike('post-1')"
+            >
+              <span class="mr-2">&#x1F44D;</span>
+              <span class="like-count text-white-500">0</span>
+            </button>
+            <button
+              class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full ml-4"
+            >
+              Deixar de seguir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-700 shadow-md rounded-lg overflow-hidden" id="post-2">
+      <div class="px-4 py-2">
+        <div class="font-bold text-xl mb-2 text-white">
+          LINHA 6003-10 - TERM. VARGINHA
+        </div>
+        <p class="text-gray-400 text-base">
+          Tráfego intenso na Av. Interlagos, sentido bairro, próximo à Rua João
+          Alvares Soares.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+          <div class="flex items-center">
+            <img
+              src="https://pbs.twimg.com/profile_images/1202026640/mussum_2902_1__400x400.jpg"
+              class="h-6 w-6 rounded-full mr-2"
+            />
+            <span class="text-gray-400">Jan 1, 2022</span>
+          </div>
+          <div class="flex items-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              onclick="addLike('post-2')"
+            >
+              <span class="mr-2">&#x1F44D;</span>
+              <span class="like-count text-white-500">0</span>
+            </button>
+            <button
+              class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full ml-4"
+            >
+              Deixar de seguir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-700 shadow-md rounded-lg overflow-hidden" id="post-2">
+      <div class="px-4 py-2">
+        <div class="font-bold text-xl mb-2 text-white">
+          LINHA 7016-10 - TERM. STO. AMARO
+        </div>
+        <p class="text-gray-400 text-base">
+          Tráfego intenso na Av. Interlagos, sentido bairro, próximo à Rua João
+          Alvares Soares.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+          <div class="flex items-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Barack_Obama_profile_picture.jpg/1200px-Barack_Obama_profile_picture.jpg"
+              class="h-6 w-6 rounded-full mr-2"
+            />
+            <span class="text-gray-400">Jan 1, 2022</span>
+          </div>
+          <div class="flex items-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              onclick="addLike('post-2')"
+            >
+              <span class="mr-2">&#x1F44D;</span>
+              <span class="like-count text-white-500">0</span>
+            </button>
+            <button
+              class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full ml-4"
+            >
+              Deixar de seguir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block script %}
+<script>
+  // Initialize an empty object to store the like counts for each post
+  const likeCounts = {};
+
+  function addLike(postId) {
+    // Check if the like count for this post already exists in the likeCounts object
+    if (!likeCounts[postId]) {
+      // If not, initialize it to zero
+      likeCounts[postId] = 0;
+    }
+
+    // Increment the like count for this post
+    likeCounts[postId]++;
+
+    // Update the like count display for this post
+    const likeCountElement = document.querySelector(`#${postId} .like-count`);
+    likeCountElement.textContent = likeCounts[postId];
+  }
+</script>
+{% endblock %}
