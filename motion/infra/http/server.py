@@ -1,14 +1,14 @@
-from flask import Flask, render_template
+from flask import Blueprint, render_template
 
-app = Flask(__name__)
+server = Blueprint("server", __name__, url_prefix="/", template_folder="templates")
 
 
-@app.route("/")
-@app.route("/posts/")
+@server.route("/")
+@server.route("/posts/")
 def posts():
     return render_template("posts.html")
 
 
-@app.route("/search/")
+@server.route("/search/")
 def search():
     return render_template("search.html")
