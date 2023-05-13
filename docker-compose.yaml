@@ -1,0 +1,33 @@
+version: "3.8"
+
+volumes:
+  mongodb-data:
+
+networks:
+  default:
+    name: motion
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: your_username
+      MONGO_INITDB_ROOT_PASSWORD: your_password
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - default
+
+  motion:
+    build: .
+    ports:
+      - "9000:9000"
+    command: ["uwsgi", "--ini", "uwsgi.ini"]
+    depends_on:
+      - mongodb
+    networks:
+      - default
