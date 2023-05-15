@@ -2,5 +2,4 @@ black==23.3.0
 Flask==2.3.2
 Flask-PyMongo==2.3.0
 ipython==8.13.2
-pymongo==4.3.3
 uWSGI==2.0.21

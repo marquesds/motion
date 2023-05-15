@@ -2,6 +2,11 @@
 <html>
   <head>
     {% block head %}
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f68c.svg"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Motion - {% block title %}{% endblock %}</title>
     {% endblock %}
@@ -11,7 +16,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between">
           <div class="flex">
-            <a href="#" class="mr-8 font-bold text-xl text-white">Motion</a>
+            <a href="/" class="mr-8 font-bold text-xl text-white">Motion</a>
           </div>
           <div class="flex">
             <a href="#" class="text-gray-500 hover:text-gray-200 mr-4"
@@ -23,13 +28,12 @@
       </div>
     </nav>
     <div class="container mx-auto px-4 py-4">
-      <form class="flex items-center">
+      <form class="flex items-center" action="/search/" method="POST">
         <input
           type="text"
+          name="line"
           placeholder="Buscar linha de ônibus"
           class="rounded-l-lg py-2 px-4 bg-white-700 text-gray-800 w-full focus:outline-none focus:bg-gray-100"
-          autocomplete="off"
-          list="bus-lines"
         />
         <button class="bg-blue-500 hover:bg-blue-700 rounded-r-lg px-4 py-2">
           <svg

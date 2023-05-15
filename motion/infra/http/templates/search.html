@@ -1,8 +1,9 @@
 {% extends "base.html" %} {% block title %}Buscar{% endblock %} {% block content
 %}
-<div class="mt-8">
+<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
   <h2 class="text-2xl font-bold mb-4">Resultados:</h2>
   <ul>
+    {% for line in lines %}
     <li
       class="flex items-center bg-gray-700 rounded-lg shadow-md px-4 py-2 mb-4"
     >
@@ -10,47 +11,24 @@
         <span class="mr-2">🚌</span>
       </div>
       <div class="flex items-center flex-grow ml-4">
-        <h3 class="font-bold text-xl">LINHA 6003-10: TERM. VARGINHA</h3>
-        <p class="text-gray-400 ml-4">TERM. GRAJAÚ / TERM. VARGINHA</p>
+        <h3 class="font-bold text-xl">Linha: {{ line.number }}</h3>
+        <p class="text-gray-400 ml-4">{{ line.description }}</p>
       </div>
+      {% if line.following %}
+      <button
+        class="ml-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Deixar de seguir
+      </button>
+      {% else %}
       <button
         class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
         Seguir
       </button>
+      {% endif %}
     </li>
-    <li
-      class="flex items-center bg-gray-700 rounded-lg shadow-md px-4 py-2 mb-4"
-    >
-      <div class="flex-shrink-0">
-        <span class="mr-2">🚌</span>
-      </div>
-      <div class="flex items-center flex-grow ml-4">
-        <h3 class="font-bold text-xl">LINHA 6003-10: TERM. GRAJAÚ</h3>
-        <p class="text-gray-400 ml-4">TERM. GRAJAÚ / TERM. VARGINHA</p>
-      </div>
-      <button
-        class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Seguir
-      </button>
-    </li>
-    <li
-      class="flex items-center bg-gray-700 rounded-lg shadow-md px-4 py-2 mb-4"
-    >
-      <div class="flex-shrink-0">
-        <span class="mr-2">🚌</span>
-      </div>
-      <div class="flex items-center flex-grow ml-4">
-        <h3 class="font-bold text-xl">LINHA 6003-21: EST. MENDES/VL. NATAL</h3>
-        <p class="text-gray-400 ml-4">TERM. VARGINHA / EST. MENDES/VL. NATAL</p>
-      </div>
-      <button
-        class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Seguir
-      </button>
-    </li>
+    {% endfor %}
   </ul>
 </div>
 {% endblock %}

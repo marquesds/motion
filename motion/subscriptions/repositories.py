@@ -1,15 +1,19 @@
 from typing import Protocol
 
-from motion.subscriptions.entities import Bus, Passenger
-
 
 class SubscriptionRepository(Protocol):
-    def follow(self, passenger: Passenger, bus: Bus) -> None:
+    def follow(self, passenger, bus):
         ...
 
-    def unfollow(self, passenger: Passenger, bus: Bus) -> None:
+    def unfollow(self, passenger, bus):
+        ...
+
+
+class MongoBusLineRepository:
+    def list(self, line=None):
         ...
 
 
 class PostRepository(Protocol):
-    ...
+    def list(self, passenger):
+        ...
