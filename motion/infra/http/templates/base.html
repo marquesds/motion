@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% block head %}
     <link
       rel="icon"
       type="image/x-icon"
@@ -9,14 +8,16 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Motion - {% block title %}{% endblock %}</title>
-    {% endblock %}
+    {% block head %} {% endblock %}
   </head>
   <body class="bg-gray-800 text-white">
     <nav class="bg-gray-900 py-4">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between">
           <div class="flex">
-            <a href="/" class="mr-8 font-bold text-xl text-white">Motion</a>
+            <a href="/posts/" class="mr-8 font-bold text-xl text-white"
+              >Motion</a
+            >
           </div>
           <div class="flex">
             <a href="#" class="text-gray-500 hover:text-gray-200 mr-4"
@@ -68,6 +69,6 @@
         </p>
       </div>
     </footer>
-    {% block script %}{% endblock %}
   </body>
+  {% block script %}{% endblock %}
 </html>

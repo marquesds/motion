@@ -1,11 +1,30 @@
 {% extends "base.html" %} {% block title %}Atualizações{% endblock %} {% block
-content %}
+head %}
+<style>
+  .animate-blur-out {
+    animation-name: blur-out;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes blur-out {
+    from {
+      filter: blur(0);
+      opacity: 1;
+    }
+    to {
+      filter: blur(5px);
+      opacity: 0;
+    }
+  }
+</style>
+{% endblock %} {% block content %}
 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
   <h2 class="text-3xl font-bold mb-8">Últimas Atualizações</h2>
   <div class="grid grid-cols-1 gap-4">
     {% for post in posts %}
     <div
-      class="bg-gray-700 shadow-md rounded-lg overflow-hidden"
+      class="bg-gray-700 shadow-md rounded-lg overflow-hidden line-{{ post.line.number }}"
       id="post-{{ post._id }}"
     >
       <div class="px-4 py-2">
@@ -25,16 +44,23 @@ content %}
           <div class="flex items-center">
             <button
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-              onclick="addLike('like-{{ post._id }}')"
+              onclick="addLike('post-{{ post._id }}')"
             >
               <span class="mr-2">&#x1F44D;</span>
               <span class="like-count text-white-500">{{ post.likes }}</span>
             </button>
-            <button
-              class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full ml-4"
-            >
-              Deixar de seguir
-            </button>
+            <form class="unfollow-form" method="POST">
+              <input
+                type="hidden"
+                name="line-number"
+                value="{{ post.line.number }}"
+              />
+              <button
+                class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full ml-4 unfollow-btn"
+              >
+                Deixar de seguir
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -43,25 +69,36 @@ content %}
   </div>
 </div>
 {% endblock %} {% block script %}
-<script>
-  // Initialize an empty object to store the like counts for each post
-  const likeCounts = {};
+<script type="text/javascript">
+  const forms = document.querySelectorAll(".unfollow-form");
 
-  function addLike(postId) {
-    // Check if the like count for this post already exists in the likeCounts object
-    if (!likeCounts[postId]) {
-      // If not, initialize it to zero
-      likeCounts[postId] = 0;
-    }
+  forms.forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const busLine = this.querySelector('input[name="line-number"]').value;
+      const busLineClass = `.line-${busLine}`;
 
-    // Increment the like count for this post
-    likeCounts[postId]++;
+      const xhr = new XMLHttpRequest();
+      const url = "/unfollow/";
 
-    // Update the like count display for this post
-    const likeCountElement = document.querySelector(
-      `#like-${postId} .like-count`
-    );
-    likeCountElement.textContent = likeCounts[postId];
-  }
+      xhr.open("POST", url);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.send(`bus_line=${busLine}`);
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var cards = document.querySelectorAll(busLineClass);
+          cards.forEach((card) => {
+            card.classList.add("animate-blur-out");
+            setTimeout(function () {
+              card.style.display = "none";
+            }, 500);
+          });
+        } else {
+          console.log(xhr.responseText);
+        }
+      };
+    });
+  });
 </script>
 {% endblock %}

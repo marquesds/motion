@@ -87,13 +87,31 @@ class MongoBusLineRepository:
 
 class MongoSubscriptionRepository:
     def __init__(self, connection):
-        self.db = connection.get_db()
+        self.db_following = connection.get_db()
 
     def follow(self, passenger, bus):
-        ...
+        following = self.db_following.following.find_one({"passenger": passenger.email})
+
+        lines = following.get("lines", [])
+        lines.append(bus)
+        lines = list(set(lines))
+        following["lines"] = lines
+
+        self.db_following.following.update_one(
+            {"_id": following["_id"]}, {"$set": following}, upsert=True
+        )
 
     def unfollow(self, passenger, bus):
-        ...
+        following = self.db_following.following.find_one({"passenger": passenger.email})
+
+        lines = following.get("lines", [])
+        lines.remove(bus)
+        lines = list(set(lines))
+        following["lines"] = lines
+
+        self.db_following.following.update_one(
+            {"_id": following["_id"]}, {"$set": following}, upsert=True
+        )
 
 
 class MongoPostRepository:
