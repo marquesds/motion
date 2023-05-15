@@ -17,22 +17,26 @@
         <p class="text-gray-400 ml-4">{{ line.description }}</p>
       </div>
       {% if line.following %}
-      <form action="/unfollow/" method="POST">
-        <input type="hidden" name="line_id" value="{{ line.number }}" />
-        <button
-          class="ml-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Deixar de seguir
-        </button>
+      <form method="POST" class="unfollow-form">
+        <input type="hidden" name="line-number" value="{{ line.number }}" />
+        <div id="line-{{ line.number }}">
+          <button
+            class="ml-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Deixar de seguir
+          </button>
+        </div>
       </form>
       {% else %}
-      <form action="/follow/" method="POST">
-        <input type="hidden" name="line_id" value="{{ line.number }}" />
-        <button
-          class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Seguir
-        </button>
+      <form method="POST" class="follow-form">
+        <input type="hidden" name="line-number" value="{{ line.number }}" />
+        <div id="line-{{ line.number }}">
+          <button
+            class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Seguir
+          </button>
+        </div>
       </form>
       {% endif %}
     </li>
@@ -42,5 +46,68 @@
   </ul>
 </div>
 {% endblock %} {% block script %}
-<script></script>
+<script>
+  const followForms = document.querySelectorAll(".follow-form");
+  const unfollowForms = document.querySelectorAll(".unfollow-form");
+
+  followForms.forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const busLine = this.querySelector('input[name="line-number"]').value;
+      const busLineId = `line-${busLine}`;
+
+      const xhr = new XMLHttpRequest();
+      const url = "/follow/";
+
+      xhr.open("POST", url);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.send(`bus_line=${busLine}`);
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var buttonDiv = document.getElementById(busLineId);
+          buttonDiv.innerHTML = `
+            <button
+              class="ml-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Deixar de seguir
+            </button>
+          `;
+        } else {
+          console.log(xhr.responseText);
+        }
+      };
+    });
+  });
+
+  unfollowForms.forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const busLine = this.querySelector('input[name="line-number"]').value;
+      const busLineId = `line-${busLine}`;
+
+      const xhr = new XMLHttpRequest();
+      const url = "/unfollow/";
+
+      xhr.open("POST", url);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.send(`bus_line=${busLine}`);
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var buttonDiv = document.getElementById(busLineId);
+          buttonDiv.innerHTML = `
+            <button
+              class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Seguir
+            </button>
+          `;
+        } else {
+          console.log(xhr.responseText);
+        }
+      };
+    });
+  });
+</script>
 {% endblock %}

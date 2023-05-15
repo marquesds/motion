@@ -33,7 +33,7 @@ def posts():
 def search():
     repository = MongoBusLineRepository(connection=Connection())
     if request.method == "POST":
-        line = request.form["line"]
+        line = request.form.get("line")
         lines = repository.list(passenger=passenger, line=line)
         return render_template("search.html", lines=lines)
 
